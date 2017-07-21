@@ -1,7 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavigationComponent } from './navigation.component';
-import { MdToolbarModule } from "@angular/material";
+import { MdToolbarModule, MdIconModule, MdButtonModule, MdMenuModule } from "@angular/material";
+
 
 
 describe('NavigationComponent', () => {
@@ -11,7 +12,7 @@ describe('NavigationComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ NavigationComponent ],
-      imports: [ MdToolbarModule ]
+      imports: [ MdToolbarModule, MdIconModule, MdButtonModule, MdMenuModule ]
     })
     .compileComponents();
   }));

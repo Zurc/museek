@@ -2,7 +2,7 @@ import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
-import { MdToolbarModule } from "@angular/material";
+import { MdToolbarModule, MdIconModule, MdButtonModule, MdMenuModule } from "@angular/material";
 
 
 describe('AppComponent', () => {
@@ -13,7 +13,10 @@ describe('AppComponent', () => {
         NavigationComponent
       ],
       imports: [
-        MdToolbarModule
+        MdToolbarModule,
+        MdIconModule,
+        MdButtonModule,
+        MdMenuModule
       ]
     }).compileComponents();
   }));
@@ -30,10 +33,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('app works!');
   }));
 
-  it('should render title in a h1 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('app works!');
-  }));
 });

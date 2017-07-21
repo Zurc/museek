@@ -1,8 +1,14 @@
 <md-toolbar color="primary">
-  <span>Application Title</span>
+  
+  <md-icon>home</md-icon>
+  <span> Museek</span>
+  <span class="fill-remaining-space"></span>
+  
+  <button md-button [mdMenuTriggerFor]="appMenu"><md-icon>menu</md-icon> Menu</button>
 
-  <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space"></span>
+  <md-menu #appMenu="mdMenu">
+    <button  md-menu-item> Settings </button>
+    <button  md-menu-item> Help </button>
+  </md-menu>
 
-  <span>Right Aligned Text</span>
 </md-toolbar>
